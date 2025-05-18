@@ -1,4 +1,4 @@
-# 🕸️ XScraper - Challenges Ahead!
+# 🕸️ XScraper_Automation
 
 Automate data extraction from a dynamic website and export the results to structured JSON files using Java, Selenium WebDriver, and TestNG. This project focuses on end-to-end UI automation combined with data scraping and JSON serialization.
 
@@ -27,11 +27,11 @@ Automate data extraction from a dynamic website and export the results to struct
 3. Iterate through **4 pages**.
 4. For each row with **Win % less than 40%**, extract:
 
+   * Epoch Time of Scrape
    * Team Name
    * Year
    * Win %
-   * (Optional) Image
-   * Epoch Time of Scrape
+   
 5. Store the data in an `ArrayList<HashMap<String, Object>>`.
 6. Write the data to `hockey-team-data.json`.
 
@@ -49,12 +49,12 @@ Automate data extraction from a dynamic website and export the results to struct
 
    * Click the year link.
    * Extract details of the **top 5 movies**:
-
-     * Title
-     * Nominations
-     * Awards
-     * `isWinner` (true if Best Picture winner)
      * Epoch Time of Scrape
+     * Awards
+     * Title
+     * Best Picture Winner (true if Best Picture winner)
+     * Nominations
+     * Year
 4. Write the results to `oscar-winner-data.json`.
 5. **Assert** that the file exists and is not empty.
 
@@ -101,22 +101,21 @@ All files are saved in the `output/` folder located in the project root.
 
 ```json
 {
-  "epochTime": 1716043200000,
-  "teamName": "Boston Bruins",
-  "year": 2008,
-  "winPercentage": 0.39,
-  "image": "url/to/logo.png"
+  "Epoch Time of Scrape: " : 1747571350,
+  "Team Name: " : "Dallas Stars",
+  "Year: " : "1994",
+  "Win %: " : "0.354"
 }
 ```
 
 ```json
 {
-  "epochTime": 1716043300000,
-  "year": 1999,
-  "title": "American Beauty",
-  "nominations": 8,
-  "awards": 5,
-  "isWinner": true
+  "Epoch Time of Scrape:" : 1747571374,
+  "Awards: " : 4,
+  "Title: " : "The King's Speech",
+  "Best Picture Winner: " : true,
+  "Nomination: " : 12,
+  "Year: " : 2010
 }
 ```
 
